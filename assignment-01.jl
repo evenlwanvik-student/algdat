@@ -12,3 +12,6 @@ function inser-sort!(A)
         A[j+1] = key # set equal to the last index that was bigger than current
     end
 end
+
+A = [0,1,2,4,2]
+#test push
