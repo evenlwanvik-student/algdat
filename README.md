@@ -1,3 +1,8 @@
+$$
+\usepackage{bbm}
+y_{ij} = b_{ij} + \beta_{0} + \beta_{1}
+$$
+
 # algdat
 Algorithms and data structures exercises
 
