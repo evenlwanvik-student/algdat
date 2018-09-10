@@ -16,5 +16,9 @@ This is denoted as f(n)=theta(g(n))
 
 ## Sorting algorithms
 Merge sort and heapsort achieve a upper bound of O(nlg(n)) in the worst case; quicksort however achieves it on average. Moreover, for each of these algorithms, we can produce a sequence of n input numbers that causes the algorithm to run in Omega(nlgn). These algorithms are sorted based on comparisons between input elements, and we call them **comparison sorts**.
+
 Any comparison sort must make Omega(nlgn) comparisons in the worst case to sort n elements, thus merge sort and heapsort are asymptotically optimal, and no comparison sort exists that is faster by more than a constant factor.
+
+### Lower bounds for sorting
+In a comparison sort, we use only comparisons to gain information about an inputn sequence, i.e. given the two elements a___i and a___j, we perform the following tests a___i$<$a___j, a___i$\leq$a___j, a___i$=$a___j, a___i$\geq$a___j, or a___i$>$a___j 
 
