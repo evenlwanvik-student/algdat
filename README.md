@@ -1,7 +1,11 @@
-$$
-\usepackage{bbm}
-y_{ij} = b_{ij} + \beta_{0} + \beta_{1}
-$$
+---
+title: "Title"
+author: "Me"
+header-includes:
+   - \usepackage{bbm}
+output:
+    pdf_document
+---
 
 # algdat
 Algorithms and data structures exercises
