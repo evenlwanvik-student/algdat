@@ -71,7 +71,28 @@ c = 3 > log2(4) = 2 -> **case 3** T(n)=Θ(n^c)=Θ(n^3)
 ## Variabelskifte
 
 ### Løs rekurensen gitt ved T(n)=T(√n)+n ved hjelp av variabelskifte. Hva blir kjøretiden? \\ Hint: √n er det samme som n^(1/2).
-La m=lg(n) og S(m)=T(2^m)
+In recursion like T(n) = T(n/2) + 1 you will reduce height of tree 2 times in each iteration which leads to Θ(logn) but in this case, you will reduce input number by power of two (not two times) so it will be Θ(log log n ). However, in this case the linear expression will dominate the time it takes to solve the problem, i.e. the answer is Θ(n)
+
+## Kjøretidsanalyse
+
+### Funksjonen gjoerNoe(n) under har kjøretid Θ(n). Hva blir kjøretiden til funksjonen f1(n)?
+Hint: Sett opp to rekurrenser T1(n) og T2(n) og finn først en løsning på lukket form for T1(n).\\
+function f1(n)
+    gjoerNoe(n)
+    if n > 1
+        f1(n / 2)
+        f2(n - 2)
+    end
+end
+
+function f2(n)
+    gjoerNoe(n)
+    if n > 1
+        f1(n / 2)
+    end
+end
+
+
 
 
 
