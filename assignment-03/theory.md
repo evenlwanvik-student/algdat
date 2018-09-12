@@ -66,6 +66,13 @@ Master theorem **Case 2**: T(n) = Θ(n^(log_b(a))log(n)) = Θ(n^3log(n))
 c = 3 > log2(4) = 2 -> **case 3** T(n)=Θ(n^c)=Θ(n^3)
 
 ### La T(n)=T(n/3)+T(n/2)+T(n−1)+1 der T(1)=1. Hva blir høyden til rekursjonstreet?
+1 < T(n/3) < T(n/2) < T(n-1) = Θ(n)
+
+## Variabelskifte
+
+### Løs rekurensen gitt ved T(n)=T(√n)+n ved hjelp av variabelskifte. Hva blir kjøretiden? \\ Hint: √n er det samme som n^(1/2).
+La m=lg(n) og S(m)=T(2^m)
+
 
 
 
