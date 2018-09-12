@@ -14,6 +14,13 @@ Theta is basically saying that the function, f(n) is bounded both from the top a
 by the same function, g(n). f(n) is theta if and only if f(n)=O(g(n)) and f(n)=Omega(g(n)).
 This is denoted as f(n)=theta(g(n))
 
+## substitution method for solving recurrences
+The substitution method for solving recurrences comprises two steps: \\
+1. Guess the form of the sollution. \\
+2. Use mathematical induction to find the constants and show that the solution works. \\
+We substitute the guessed solution for the function when applying the inductive hypothesis to smaller values; hence the name "substitution method". \\
+As an example, let us determine an upper bound on the recurrence T(n)=2T(n/2)+n
+
 ## Master Theorem
 the **master theorem for divide-and-conquer recurrences** provides an asymptotic analysis (using Big O notation) for recurrence relations of types that occur in the analysis of many divide and conquer algorithms.
 The runtime of an command and conquer algorithm where the problem is divided into 'a' subproblem having half the size 'n/b', usually denoted T(n), can be expressed by the *recurrence relation* T(n)=aT(n/b)+f(n) where f(n) is the time to create the subproblems and combine their results in the above procedure. This equation can be successively substituted into itself and expanded to obtain tan expression for the total amount of work done. The master theorem allows many recurrence relations of this form to be converted to Omega-notation directly, without doing an expansion of the recursive relation.
