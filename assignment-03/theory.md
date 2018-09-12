@@ -62,6 +62,9 @@ when f(n)=Ω(n^c) where c > ccrit.. long story short; the total is dominated by 
 ### La T(n)=27⋅T(n/3)+n3. Hva blir kjøretiden?
 Master theorem **Case 2**: T(n) = Θ(n^(log_b(a))log(n)) = Θ(n^3log(n))
 
+### La T(n)=4⋅T(n/2)+n3. Hva blir kjøretiden?
+c = 3 > log2(4) = 2 -> **case 3** T(n)=Θ(n^c)=Θ(n^3)
+
 ### La T(n)=T(n/3)+T(n/2)+T(n−1)+1 der T(1)=1. Hva blir høyden til rekursjonstreet?
 
 
