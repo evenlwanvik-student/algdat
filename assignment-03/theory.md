@@ -38,10 +38,10 @@ Alle stemmer, det lineære eller konstante leddet blir veldig raskt dominert av 
 ### La T(n)=27⋅T(n/3)+n3. Hvilket tilfelle tilhører rekurrensen når du benytter master-teoremet?
 Rekurrensen tilhører Case 3, da det kubiske leddet dominerer og tilsvarer arbeidet det tar å splitte/rekombinere problemet, i.e. det rekursive treet h
 
-a=27, b=3, f(n)=n^3 -> c=3
-check if **case 1**: log_b(a)=log_3(27)=3 (not)> c=3 NOT CORRECT
-check if **case 2**: log_b(a)=log_3(27)=3 == c=log_b(a) CORRECT -> Work to split/recombine a problem is comparable to subproblems.
-check if **case 1**: log_b(a)=log_3(27)=3 (not)< c=3 NOT CORRECT
+a=27, b=3, f(n)=n^3 -> c=3 \\
+check if **case 1**: log_b(a)=log_3(27)=3 (not)> c=3 NOPE \\
+check if **case 2**: log_b(a)=log_3(27)=3 == c=log_b(a) YERP -> Work to split/recombine a problem is comparable to subproblems. \\
+check if **case 1**: log_b(a)=log_3(27)=3 (not)< c=3 NOPE \\
 
 The master method provides a "cookbook" method for solving recurrences of the form T(n)=aT(n/b)+f(n). \\
 Then we have T(n)=aT(n/b)+f(n), where f(n) is the time to create the subproblems and combine their results in the above procedure. This equation can be successively substituted into itself and expanded to obtain an expression for the total amount of work done. The master theorem allows many recurrence relations of this form to be converted to Θ-notation directly, without doing an expansion of the recursive relation. *n* is the size of an input problem, *a* is the number of subproblems in the recursion, and *b* is the factor by which the subproblem size is reduced in each recursive call. The theorem below also assumes that, as a base case for the recurrence, T(n)=Θ(1) when *n* is less than some bound k>0 (e.g. p<q), the smallest input size that will lead to a recursive call. \\
