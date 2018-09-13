@@ -12,7 +12,8 @@ Quicksort gjør sorteringsarbeidet før det rekursive kallet, mens mergesort gj�
 Begge har kjøretid Θ(n2)
 
 
-1+2+⋯+(n−1)+n is an arithmetic series, and it evaluates to (n+1)(n/2)+n/2. In terms of big-Θ notation, we don't care about that constant factor, nor do we care about the factor of 1/2 or the low-order term. The result is that the running time for all the calls to indexOfMinimum is Θ(n^2). \\
+1+2+⋯+(n−1)+n is an arithmetic series, and it evaluates to (n+1)(n/2)+n/2. In terms of big-Θ notation, we don't care about that constant factor, nor do we care about the factor of 1/2 or the low-order term. The result is that the running time for all the calls to indexOfMinimum is Θ(n^2). 
+
 arithmetic series: (8+1)+(7+2)+(6+3)+(5+4) = 9+9+9+9 = (n+1)(n/2)
 
 ### Hvilken av algoritmene forbruker mest ekstra minne i average case?
@@ -38,10 +39,13 @@ Alle stemmer, det lineære eller konstante leddet blir veldig raskt dominert av 
 ### La T(n)=27⋅T(n/3)+n3. Hvilket tilfelle tilhører rekurrensen når du benytter master-teoremet?
 Rekurrensen tilhører Case 3, da det kubiske leddet dominerer og tilsvarer arbeidet det tar å splitte/rekombinere problemet, i.e. det rekursive treet h
 
-a=27, b=3, f(n)=n^3 -> c=3 \\
-check if **case 1**: log_b(a)=log_3(27)=3 (not)> c=3 NOPE \\
-check if **case 2**: log_b(a)=log_3(27)=3 == c=log_b(a) YERP -> Work to split/recombine a problem is comparable to subproblems. \\
-check if **case 1**: log_b(a)=log_3(27)=3 (not)< c=3 NOPE \\
+a=27, b=3, f(n)=n^3 -> c=3 
+
+check if **case 1**: log_b(a)=log_3(27)=3 (not)> c=3 NOPE 
+
+check if **case 2**: log_b(a)=log_3(27)=3 == c=log_b(a) YERP -> Work to split/recombine a problem is comparable to subproblems.
+
+check if **case 1**: log_b(a)=log_3(27)=3 (not)< c=3 NOPE 
 
 The master method provides a "cookbook" method for solving recurrences of the form T(n)=aT(n/b)+f(n). \\
 Then we have T(n)=aT(n/b)+f(n), where f(n) is the time to create the subproblems and combine their results in the above procedure. This equation can be successively substituted into itself and expanded to obtain an expression for the total amount of work done. The master theorem allows many recurrence relations of this form to be converted to Θ-notation directly, without doing an expansion of the recursive relation. *n* is the size of an input problem, *a* is the number of subproblems in the recursion, and *b* is the factor by which the subproblem size is reduced in each recursive call. The theorem below also assumes that, as a base case for the recurrence, T(n)=Θ(1) when *n* is less than some bound k>0 (e.g. p<q), the smallest input size that will lead to a recursive call. \\
