@@ -92,8 +92,61 @@ function f2(n)
     end
 end
 
+T1(n)=Θ(1)+T1(n/2)+T2(n-2), T1(1)=Θ(1)
+T2(n)=Θ(1)+T1(n/2), T2(1)=Θ(1)
+
+T1(n)=Θ(1)+T1(n/2)+Θ(1)+T2((n-2)/2)=T1(n/2)+T2(n/2-1)+Θ(1) ~ 2*T1(n/2)+Θ(1)
+=> 2*T(n/2)=Θ(n)
+
+If you draw the recursion tree of 2T(n/2), you find constants at every level. Height of the tree is log n. It is easy to see that the number of constants at every level is the number of recursvie calls at that level!
+Level                  Constants
+n                        c
+n/2,n/2                  2c
+n/4,n/4,n/4,n/4          4c
+
+Last level will have 2^(lg2(n)) terms, hence 2^(lg2(n))∗c=cn (Note - its log base 2) 
+
+This is because for every recursion you have a constant c. (Usually the constants are ignored, but for this case it is easier to see the problem as constants)
+
+### Hva blir kjøretiden til funksjonen f3(n)?
+function f3(n)
+    if n > 42
+        f3(n - 42)
+        f3(42)
+    end
+end
+
+T(n)=T(n-42)+T(42)=T(n-42)+Θ(1)
+T(n)=T(n-42) -> worst case=T(n)=O(n) ?? ***sjekk LF!***
+
+### Hva blir kjøretiden til funksjonen f4(n)? println tar konstant tid.
+function f4(n)
+    for i in 1:n
+        println("Algdat ruler!")
+    end
+
+    if n > 1
+        f4(3/4* n)
+        f4(1/4* n)
+    end
+end
+
+T(n)=n+T(3n/4)+T(n/4)
+n+n+3n/4+n/4.. Tipper worst case = T(n)=O(nlog(n)), ***sjekk LF!***
 
 
+Funksjonen må gjøre n ganger T(n)=O(n)
 
+### Funksjonen gjoerNoeAnnet(n) under har kjøretid Θ(n^). Hva blir kjøretiden til funksjonen f5(n)?
+function f5(n)
+    gjoerNoeAnnet(n/6)
+
+    if n > 1
+        f5(n/2 - 2)
+        f5(n/2 - 3)
+    end
+end
+
+T(n)=Θ(n^2)+T(n/2-2)+T(n/2-3)
 
 
