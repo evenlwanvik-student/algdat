@@ -28,9 +28,17 @@ P(i,j) = max{P(i-1,j) ,P(i,j-1) ,P(i-1,j-1) }
 
 ### (Se bilde på inginious)
 
-### Vi skal nå prøve å finne ut av hvor mange veier det finnes fra punkt start (punkt [1, 1]) til punkt Mål (punkt [m, n]) under visse restriksjoner. En lovlig vei fra Start til Mål defineres ved at et skritt fra punkt [i, j] på veien skal gå enten til punktet [i+1, j] eller til punktet [i, j+1]. To veier er forskjellige dersom de ikke er identisk like, skritt for skritt. Funksjonen T(i, j) skal gi antall veier fra punkt [1, 1] til punkt [i, j]. Dette fører til at T(1, 2) = 1 og T(3, 2) = 3.
+### Vi skal nå prøve å finne ut av hvor mange veier det finnes fra punkt start (punkt [1, 1]) til punkt Mål (punkt [m, n]) under visse restriksjoner. En lovlig vei fra Start til Mål defineres ved at et skritt fra punkt [i, j] på veien skal gå enten til punktet [i+1, j] eller til punktet [i, j+1]. To veier er forskjellige dersom de ikke er identisk like, skritt for skritt. Funksjonen T(i, j) skal gi antall veier fra punkt [1, 1] til punkt [i, j]. Dette fører til at T(1, 2) = 1 og T(3, 2) = 3. Hva blir T(1,4)?
 
-Hva blir T(1,4)?
+3
+
+### Hva blir T(6,3)? (Det kan være lurt å finne et system)
+
+8
+
+### I dynamisk programmering handler det ofte om å finne et utrykk som gir deg svaret på et problem dersom du allerede har svaret på en delinstans av problemet, en rekursiv dekomponering. Hvilket av utrykkene under beskriver T(m,n)? T(m,n) =
+
+P(i,j) = max{P(i-1,j) ,P(i,j-1) ,P(i-1,j-1) }
 
 ## Stavkutting
 
@@ -43,3 +51,5 @@ Hva blir T(1,4)?
 8*3 = 24 (8 n=1 lange staver)
 
 ### Hvor mange delinstanser må man løse for å finne optimal løsning for stavkutte-problemet hvis staven har en lengde n? Merk: Her er det ikke viktig hvor lang tid en algoritme ville brukt på å løse problemet.
+
+Θ(n^2)
