@@ -32,3 +32,14 @@ P(i,j) = max{P(i-1,j) ,P(i,j-1) ,P(i-1,j-1) }
 
 Hva blir T(1,4)?
 
+## Stavkutting
+
+### Gitt en stav med lengde N. En stav med lengde i kan selges for p_i, for i=1,2,...,N. Finn hvordan staven skal kuttes opp slik at du maksimerer inntekten R ved å selge staven. Hva blir inntekten R når N = 4, p_1 = 3, p_2 = 7, p_3 = 12, p_4 = 13
+
+15
+
+### Hva blir R når N = 8, p_1 = 3, p_2 = 4, p_3 = 7 p_4 = 10, p_5 = 12, p_6 = 14, p_7 = 15, p_8 = 18
+
+8*3 = 24 (8 n=1 lange staver)
+
+### Hvor mange delinstanser må man løse for å finne optimal løsning for stavkutte-problemet hvis staven har en lengde n? Merk: Her er det ikke viktig hvor lang tid en algoritme ville brukt på å løse problemet.
