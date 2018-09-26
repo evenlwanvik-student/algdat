@@ -19,15 +19,18 @@ function parse_string(str_in)
     return arr_out
 end
 
-function build(parsed_list)
-    listlength = length(parsed_list)
-    for i = 1:listlength
-        parentnode = rootnode
-        for c = 1:length(parsed_list[i][1])
-            parentnode.children
+include("./tree_init.jl") # initialize the node struct and rootnode
 
-            #println(parsed_list[i][1][c])
+function build(list)
+    listlength = length(list)
+    for i = 1:listlength
+        parentnode = rootnode # reset to rootnode when finished with string
+        for c = 1:length(list[i][1])
+            childnode = Node(Dict(),[]) # initialize the childnode
+            parentnode.children[list[i][1][c]] = childnode # create a childnode for that letter
+            parentnode = childnode
         end
+        push!(parentnode.posi, list[i][2])
     end
     #Ettersom parentNode.children er en Dict() kan du bare gjøre noe som det hær
     #if skalLeggeTilEnChildNode
