@@ -20,13 +20,14 @@ Fordi delproblemene ikke overlapper
 
 ### Hvilken av disse rekursive dekomponeringene beskriver et problem som trolig kan løses ved hjelp av dynamisk programmering? Hint: Prøv å tegne delinstans-grafen og se etter overlapp, start med f.eks. P(5,5) og se om noen av delinstansene blir like)
 
-P(i,j) = max{P(i-1,j) ,P(i,j-1) ,P(i-1,j-1) } FEIL
+P(i,j) = max{P(i-1,j) ,P(i,j-1) ,P(i-1,j-1) } OG
+P(i,j) = min {P(i,j-2) , P( i-1, j)}
 
 ## Matrisetraversering
 
 ### I denne oppgaven skal vi ta for oss et rektangulært rutenett gitt som følger: (Se bilde på inginious) Vi skal nå prøve å finne ut av hvor mange veier det finnes fra punkt start (punkt [1, 1]) til punkt Mål (punkt [m, n]) under visse restriksjoner. En lovlig vei fra Start til Mål defineres ved at et skritt fra punkt [i, j] på veien skal gå enten til punktet [i+1, j] eller til punktet [i, j+1]. To veier er forskjellige dersom de ikke er identisk like, skritt for skritt. Funksjonen T(i, j) skal gi antall veier fra punkt [1, 1] til punkt [i, j]. Dette fører til at T(1, 2) = 1 og T(3, 2) = 3. Hva blir T(1,4)?
 
-3 FEIL
+1
 
 ### Hva blir T(6,3)? (Det kan være lurt å finne et system)
 
@@ -48,4 +49,4 @@ P(i,j) = max{P(i-1,j) ,P(i,j-1) ,P(i-1,j-1) }
 
 ### Hvor mange delinstanser må man løse for å finne optimal løsning for stavkutte-problemet hvis staven har en lengde n? Merk: Her er det ikke viktig hvor lang tid en algoritme ville brukt på å løse problemet.
 
-Θ(n^2) FEIL
+Θ(n)
