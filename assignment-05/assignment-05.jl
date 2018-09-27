@@ -19,22 +19,38 @@ function parse_string(str_in)
     return arr_out
 end
 
-include("./tree_init.jl") # initialize the node struct and rootnode
+#struct Node
+#    children::Dict{Char,Node}
+#    posi::Array{Int}
+#end
 
 function build(list)
-    listlength = length(list)
-    for i = 1:listlength
-        parentnode = rootnode # reset to rootnode when finished with string
-        for c = 1:length(list[i][1])
-            childnode = Node(Dict(),[]) # initialize the childnode
-            parentnode.children[list[i][1][c]] = childnode # create a childnode for that letter
-            parentnode = childnode
+    toppNode = Node(Dict(),[])
+    for (string, position) in list
+        node = toppNode
+        for char in string
+            if !haskey(node.children, char)
+                node.children[char] = Node(Dict(),[])
+            end
+            node = node.children[char]
         end
-        push!(parentnode.posi, list[i][2])
+        push!(node.posi, position)
     end
-    #Ettersom parentNode.children er en Dict() kan du bare gjøre noe som det hær
-    #if skalLeggeTilEnChildNode
-    #  parentNode.children["enEllerAnnenBokstav"] = childNode
-    #end
+    return toppNode
+end
 
+function positions(word, node, idx=1)
+    if (idx > length(word))
+        position = node.posi
+    elseif (word[idx] == '?')
+        position = []
+        for key in collect(keys(node.children))
+            append!(position, positions(word, node.children[key], idx + 1))
+        end
+    elseif (haskey(node.children, word[idx]))
+        position = positions(word, node.children[word[idx]], idx + 1)
+    else
+        position = []
+    end
+    return position
 end
