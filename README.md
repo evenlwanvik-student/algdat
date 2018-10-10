@@ -1,5 +1,5 @@
 # algdat
-Algorithms and data structures exercises
+TDT4120 - Algorithms and data structures
 
 # notes
 ## asymptotic notations
