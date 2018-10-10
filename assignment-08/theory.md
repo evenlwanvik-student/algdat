@@ -38,7 +38,7 @@ There are no loops
 
 All edges have same weight or no weight.
 
-(Alle kantene har lik vekt)
+Alle kantene har lik ikke-negativ vekt.
 
 ## Dybde-først-søk
 
@@ -48,7 +48,9 @@ G,F,B,H
 
 ### Hvilke(n) påstand(er) stemmer om DFS?
 
-Forward edge or cross-edge (begge)
+Det er svært unaturlig å implementere DFS med heap ??
+
+Det er svært unaturlig å implementere DFS med kø
 
 ### Et dypde-først-søk kan brukes til å klassifisere kantene i en graf. Hvilken av følgende kanttyper betegner en kant som går fra en forgjenger (ancestor) til en etterkommer (descendant)?
 
@@ -56,14 +58,23 @@ Tree edge
 
 ### Hva slags type kant kan vi ha kommet til når vi kommer til en node som allerede er farget svart i et dypde-først-søk?
 
-Det er svært unaturlig å implementere DFS med heap ??
+Forward edge or cross-edge (begge)
 
-Det er svært unaturlig å implementere DFS med kø
+## Topologisk sortering
 
+### Hvilke(n) av følgende alternativ er en gyldig topologisk sortering?
 
+A,E,D,C,I,H,B,F,G
 
+### Du ønsker å lage en topologisk sortering av en graf G=(V,E). Hvilke av følgende kriterier må være sanne (for grafen G) for at det skal finnes en topologisk sortering?
 
+Den må være rettet og asyklisk (en DAG)
 
+## Tidligere eksamensoppgave
+
+### Du prøver å implementere BFS for urettede grafer, men på grunn av en kodefeil, er rekkefølgen på nodene i køen din ikke lenger FIFO, men helt vilkårlig. Kan du nå være sikker på å besøke alle nodene?
+
+Ja, dersom grafen er sammenhengende (syklisk?)
 
 ## Best-case-kjøretid for BFS og DFS
 
