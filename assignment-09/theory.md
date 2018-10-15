@@ -80,4 +80,4 @@ Usant
 
 Hvilket alternativ er riktig?
 
-
+Når algoritmen finner et spenntre, er det minimalt.
