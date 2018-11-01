@@ -6,17 +6,17 @@ Kjør algoritmen en gang fra hver node, totalt Θ(V) ganger.
 
 ### Alle-til-alle vha. SSSP: Hvordan kan du raskest finne korteste vei mellom alle par med noder i en rettet graf uten negative sykler, ved å kjøre en av algoritmene nedenfor fra hver node? Hva blir kjøretiden?'
 
-Dijkstra m/min-heap O(V2lgV+VE)
+Dijkstra m/min-heap, O(VElgV) FEIL
 
 ## Question 3: Forgjengermatriser: 
 
 ### πij i en forgjengermatrise, forteller oss
 
-Hvor man kom fra, på korteste vei fra j til i
+Hvor man kom fra, på korteste vei fra i til j
 
 ### πij=nil betyr at
 
-Enten er i=j eller så er det ingen sti fra j til i 
+Enten er i=j eller så er det ingen sti fra i til j
 
 ## Floyd-Warshall
 
@@ -34,7 +34,7 @@ Usant.
 
 ### Ta stilling til følgende utsagn: 1. Etter at Floyd-Warshall har kjørt, kan diagonalen avstandsmatrisen D (dvs. d1,1, d2,2 osv.) inneholde positive tall. . Etter at Floyd-Warshall har kjørt, kan diagonalen avstandsmatrisen D (dvs. d1,1, d2,2 osv.) inneholde negative tall.
 
-Begge utsagnene er sanne.
+Begge utsagnene er usanne. FEIL
 
 ## Transitive-closure
 
@@ -66,7 +66,7 @@ Revekting av kantvekter
 
 ### Hva blir kjøretiden til Johnsons algoritme i en rettet graf der alle par med noder har en kant hver vei mellom seg (en komplett digraf), dersom vi antar at vi bruker en Fibonacci-heap?
 
-
+O(V2lgV+VE) FEIL
 
 
 
