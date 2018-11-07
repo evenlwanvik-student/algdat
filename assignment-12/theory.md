@@ -42,6 +42,38 @@ O(VE2)
 
 ### Du skal finne en flytforøkende sti i nettverket fra oppgave 8 vha. BFS. Hvilken rute velges?
 
-S→v1→v2→T (den vil alltid gå den retning den kan endre (augmente) verdiene?
+S→v1→v2→T (den vil alltid gå den retning den kan endre (augmente) verdiene?)
 
-)
+### Hvor mye flyt kan sendes gjennom den flytforøkende stien fra oppgave 9?
+
+6
+
+### Hva er den maksimale flyten i nettverket fra oppgave 8?
+
+32
+
+## Minimalt snitt i graf
+
+### Gitt snittet ({S,v1},{v2,v3,v4,T}) i nettverket fra oppgave 8. Hva er flyten på tvers av snittet?
+
+59
+
+### Hva er det minimale snittet i nettverket fra oppgave 8?
+
+({S,v1,v3},{v2,v4,T}) = 34
+
+
+({S,v1,v2,v3},{v4,T}) = 26, korrekt..
+
+
+({S,v1,v2,v4},{v3,T}) ikke mulig
+
+
+({S,v1,v2},{v3,v4,T}) 58
+
+## Maksimum bipartitt matching
+
+### Hva er en matching?
+
+En delmengde av alle kanter, der hver node er tilknyttet maks en kant fra delmengden.
+
